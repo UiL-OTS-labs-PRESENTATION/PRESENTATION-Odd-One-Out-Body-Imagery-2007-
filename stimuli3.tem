@@ -1,0 +1,34 @@
+# Template Trials 
+
+trial {
+	trial_duration = 10500;
+	trial_type = first_response;
+	incorrect_feedback = wrong;
+	correct_feedback = right;
+
+	picture {		
+		text {
+		font_size = 32;
+		system_memory = true;
+		caption = "+";	
+			};
+		x=0; y=0;};
+		code = "fixation";
+	   duration = 2500;
+
+   picture {
+		text { caption = $stimulus1; };
+		x = 0; y = 150;
+		text { caption = $stimulus2; };
+		x = 0; y = 0;
+		text { caption = $stimulus3; };
+		x = 0; y = -150;
+	} ;
+	code = $trialcode;
+	delta_time = 2500;
+	duration = target_response;
+	target_button = $antwoord;  
+	code = $antwoord;
+
+};
+#End
